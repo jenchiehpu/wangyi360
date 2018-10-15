@@ -5,6 +5,7 @@
             <div class='row'>
                 <article>
                     <h1><?php echo $items['post_title']; ?></h1>
+                    <span class='article_date'><?php echo $items['post_date']; ?></span>
                     <?php if(!empty($items['post_header'])){ ?>
                     <div class='article_summary'><?php echo $items['post_header']; ?></div>
                     <?php } ?>

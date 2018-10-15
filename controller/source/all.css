@@ -135,8 +135,13 @@ article {
   background-color: #fff;
 }
 
-.article_layout h1 {
+
+.article_layout .article_date{
+  display: block;
+  margin-top: 10px;
   margin-bottom: 60px;
+  color:#999;
+  font-size: 14px;
 }
 
 .article_layout article {
@@ -273,7 +278,7 @@ aside .weixin_qrcode {
   overflow: hidden;
 }
 .list_item .list_item_desc p{
-  color:#999; 
+  color:#999;
   font-size: 14px;
   margin-top: 10px;
   line-height: 1.3em;

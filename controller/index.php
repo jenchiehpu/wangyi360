@@ -2,7 +2,7 @@
 try {
     require_once 'connectWangyi360.php';
     $wy_post_arr = [];
-    $sql = 'select * from wy_post where post_status = 1 order by post_no desc limit 10;';   
+    $sql = 'select * from wy_post where post_status = 1 order by post_no desc limit 10;';
     $results = $pdo->query($sql);
     while($wy_post = $results->fetch()){
         array_push($wy_post_arr, $wy_post);
