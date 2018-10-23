@@ -26,6 +26,20 @@
                     <p><?php echo $column['column_account']; ?></p>
                 </article>
             </div>
+            <?php if(!empty($related_arr)) { ?>
+            <div class='row'>
+                <ol class='related_article'>
+                    <?php foreach($related_arr as $i){ ?>
+                    <li>
+                        <a href="/post/<?php echo $i['post_no']; ?>?utm_source=wangyi360&utm_medium=relate_article&utm_campaign=post<?php echo $items['post_no'];?>">
+                            <h3><?php echo $i['post_title']; ?></h3>
+                            <p><?php echo $i['post_header']; ?></p>
+                        </a>
+                    </li>
+                    <?php } ?>
+                </ol>
+            </div>
+            <?php } ?>
         </aside>
     </div>
 <?php include('module/footer.php'); ?>

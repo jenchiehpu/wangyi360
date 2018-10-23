@@ -1,7 +1,7 @@
 <?php
 try{
     require_once 'connectWangyi360.php';
-
+    $related_arr = [];
     $sql = 'select * from wy_post where post_no = :post_no;';
     $pdoPrepare = $pdo->prepare($sql);
     $pdoPrepare->bindValue(':post_no', $_GET['no']);
@@ -12,6 +12,15 @@ try{
     $pdoPrepare->bindValue(':column_no', $items['column_no']);
     $pdoPrepare->execute();
     $column = $pdoPrepare->fetch();
+    $sql = 'select * from wy_post where tag_no = :tag_no;';
+    $pdoPrepare = $pdo->prepare($sql);
+    $pdoPrepare->bindValue(':tag_no', $items['tag_no']);
+    $pdoPrepare->execute();
+    $n=0;
+    while($related_article = $pdoPrepare->fetch()){
+        array_push($related_arr, $related_article);
+
+    }
 
 }catch (PDOException $e) {
     echo "錯誤原因: ", $e->getMessage(), "<br>";
