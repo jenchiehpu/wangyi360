@@ -12,7 +12,7 @@ try{
     $pdoPrepare->bindValue(':column_no', $items['column_no']);
     $pdoPrepare->execute();
     $column = $pdoPrepare->fetch();
-    $sql = 'select * from wy_post where tag_no = :tag_no;';
+    $sql = 'select * from wy_post where tag_no = :tag_no and post_status = 1 limit 3';
     $pdoPrepare = $pdo->prepare($sql);
     $pdoPrepare->bindValue(':tag_no', $items['tag_no']);
     $pdoPrepare->execute();

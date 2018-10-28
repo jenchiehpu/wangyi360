@@ -310,22 +310,22 @@ footer p {
 }
 .related_article {
   background-color: #fff;
-  padding: 12px 12px 24px 12px;
+  padding: 12px 14px 20px;
 }
 .related_article li {
+  padding: 10px 10px;
   border-bottom:1px solid #ccc;
-  margin-top: 26px;
+  margin-top: 20px;
 }
+
 .related_article li h3{
   font-size: 16px;
-  height: 1.3em;
-  line-height: 1.3em;
-  overflow: hidden;
-}
-.related_article li p {
-  font-size: 14px;
-  line-height: 1.3em;
   max-height: 2.6em;
+  line-height: 1.3em;
   overflow: hidden;
-  margin-top: 6px;
+  margin-bottom: 4px;
+}
+.related_article li span {
+  color:#9ca4ab;
+  font-size: 14px;
 }

@@ -17,7 +17,7 @@
     <meta property="og:locale" content="zh_TW">
     <meta property="og:site_name" content='老王創業日記'>
     <title><?php echo $meta_title; ?></title>
-    <link rel="stylesheet" href="../source/all.css">
+    <link rel="stylesheet" href="../source/all.css?t=<?php echo time(); ?>">
 </head>
 
 <body id='<?php echo $script; ?>'>

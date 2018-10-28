@@ -33,7 +33,7 @@
                     <li>
                         <a href="/post/<?php echo $i['post_no']; ?>?utm_source=wangyi360&utm_medium=relate_article&utm_campaign=post<?php echo $items['post_no'];?>">
                             <h3><?php echo $i['post_title']; ?></h3>
-                            <p><?php echo $i['post_header']; ?></p>
+                            <span><?php echo $i['post_date']; ?></span>
                         </a>
                     </li>
                     <?php } ?>
