@@ -12,15 +12,15 @@ try{
     $pdoPrepare->bindValue(':column_no', $items['column_no']);
     $pdoPrepare->execute();
     $column = $pdoPrepare->fetch();
-    $sql = 'select * from wy_post where tag_no = :tag_no and post_status = 1 limit 3';
+    $columnName =$column['column_name'];
+    $sql = 'select * from wy_post where column_no = :column_no and post_status = 1 limit 5';
     $pdoPrepare = $pdo->prepare($sql);
-    $pdoPrepare->bindValue(':tag_no', $items['tag_no']);
+    $pdoPrepare->bindValue(':column_no', $items['column_no']);
     $pdoPrepare->execute();
-    $n=0;
     while($related_article = $pdoPrepare->fetch()){
         array_push($related_arr, $related_article);
-
     }
+
 
 }catch (PDOException $e) {
     echo "錯誤原因: ", $e->getMessage(), "<br>";

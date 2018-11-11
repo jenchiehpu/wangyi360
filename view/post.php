@@ -29,6 +29,7 @@
             <?php if(!empty($related_arr)) { ?>
             <div class='row'>
                 <ol class='related_article'>
+                    <p><?php echo $columnName; ?> 的相關文章</p>
                     <?php foreach($related_arr as $i){ ?>
                     <li>
                         <a href="/post/<?php echo $i['post_no']; ?>?utm_source=wangyi360&utm_medium=relate_article&utm_campaign=post<?php echo $items['post_no'];?>">
